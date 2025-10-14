@@ -115,7 +115,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../imagens/Profissional.png) no-repeat center center/cover;
+    background: url(imagens/Profissional.png) no-repeat center center/cover;
     position: relative;
     padding-top: var(--tamanho-header);
 }
@@ -474,4 +474,5 @@ footer {
     .form-container {
         padding: 2rem;
     }
+
 }
