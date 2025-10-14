@@ -1,0 +1,477 @@
+/* ========================================= */
+/* PADRÃO GLOBAL E VARIÁVEIS                 */
+/* ========================================= */
+:root {
+    --cor-primaria: var(--cor-azul-claro);
+    --cor-secundaria: #044891;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333333;
+    --cor-branca: #ffffff;
+    --cor-azul-claro: #007BFF;
+
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-header: 90px;
+}
+
+/* ========================================= */
+/* ESTILOS GERAIS E RESETS                   */
+/* ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Adicionado para compensar o header fixo ao navegar pelas âncoras */
+    scroll-padding-top: var(--tamanho-header);
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+section {
+    padding: 4rem 7%;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--cor-primaria);
+}
+
+.title span {
+    color: var(--cor-secundaria);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--cor-primaria);
+}
+
+/* ========================================= */
+/* HEADER / NAVEGAÇÃO                        */
+/* ========================================= */
+.header {
+    background: var(--cor-azul-claro);
+    padding: 0 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: var(--tamanho-header);
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.nav-links a {
+    color: var(--cor-branca);
+    margin-left: 25px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================= */
+/* SEÇÃO: HOME                               */
+/* ========================================= */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../imagens/Profissional.png) no-repeat center center/cover;
+    position: relative;
+    padding-top: var(--tamanho-header);
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.home .content {
+    max-width: 60rem;
+    position: relative;
+    z-index: 2;
+}
+
+.home .content h3 {
+    color: var(--cor-branca);
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.home .content p {
+    color: var(--cor-branca);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+/* ========================================= */
+/* SEÇÃO: SOBRE                              */
+/* ========================================= */
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--cor-branca);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about .row .video-container {
+    flex: 1 1 45rem;
+    padding: 1.5rem;
+}
+
+.about .row .video-container video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+}
+
+.about .row .content p {
+    color: var(--cor-texto);
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+/* ========================================= */
+/* SEÇÃO: CONTATO                            */
+/* ========================================= */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact-info {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: var(--cor-branca);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: var(--cor-azul-claro);
+}
+
+.contact-card p {
+    color: #666;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: var(--cor-azul-claro);
+    font-weight: bold;
+}
+
+.contact-form-container {
+    flex: 1 1 400px;
+    background: var(--cor-branca);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+#formulario-whatsapp label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#formulario-whatsapp input,
+#formulario-whatsapp textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DAA53;
+}
+
+/* ========================================= */
+/* FOOTER / RODAPÉ                           */
+/* ========================================= */
+footer {
+    background-color: #222;
+    color: var(--cor-branca);
+    padding: 1.5rem 7%;
+    text-align: center;
+    margin-top: 2rem;
+}
+/* ========================================= */
+/* 7. ESTILOS ESPECÍFICOS DA PÁGINA FAQ      */
+/* ========================================= */
+.faq-section {
+    padding-top: var(--tamanho-header); /* Garante que o título não fique atrás do header */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background-color: var(--cor-branca);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* Importante para a animação */
+}
+
+.faq-question {
+    width: 100%;
+    background-color: var(--cor-branca);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6rem; /* 16px */
+    font-weight: 500;
+    color: var(--cor-primaria);
+    text-align: left;
+    text-transform: none; /* Remove o capitalize padrão dos botões */
+}
+
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+.faq-icon {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0; /* Começa fechado */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-size: 1.5rem; /* 15px */
+    line-height: 1.7;
+    color: var(--cor-texto);
+    text-transform: none;
+}
+
+/* Estilos para quando o item estiver ATIVO (aberto) */
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Altura máxima para a resposta aparecer */
+    padding-top: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* O "+" vira um "x" */
+}
+/* ========================================= */
+/* 8. PÁGINA DE SERVIÇOS                     */
+/* ========================================= */
+.servicos-section {
+    padding-top: var(--tamanho-header);
+    background-color: var(--cor-fundo);
+}
+
+.servicos-grid {
+    display: grid;
+    /* Cria 4 colunas em telas grandes */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.servico-card {
+    background: var(--cor-branca);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.servico-card ion-icon {
+    font-size: 5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 1.5rem;
+}
+
+.servico-card h3 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.servico-card p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--cor-texto);
+}
+
+/* --- Formulário de Orçamento --- */
+.orcamento-section {
+    background-color: var(--cor-branca);
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-orcamento label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.form-orcamento input,
+.form-orcamento select,
+.form-orcamento textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.form-orcamento button.btn {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+/* ========================================= */
+/* 9. RESPONSIVIDADE (SERVIÇOS)              */
+/* ========================================= */
+
+/* Para Tablets */
+@media (max-width: 992px) {
+    .servicos-grid {
+        /* Cria 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para Celulares */
+@media (max-width: 768px) {
+    .servicos-grid {
+        /* Cria 1 coluna */
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: 2rem;
+    }
+}

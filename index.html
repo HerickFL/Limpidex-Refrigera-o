@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpidex Refrigeração</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/Logo da EMPRESA.png" alt="Logo da Limpidex Refrigeração">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#contact">Contate-Nós</a>
+                <a href="Faq.html">FAQs</a>
+                <a href="#about">Quem Somos?</a>
+                <a href="servicos.html">Serviços</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="content">
+                <h3>Bem Vindo a Limpidex Refrigeração, Sua maior referência!</h3>
+                <p>Aproveite Junto com a Limpidex o Melhor Orçamento do estado</p>
+                <a href="servicos.html" class="btn">Faça Seu Orçamento</a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h1 class="title"><span>Sobre</span> Nós</h1>
+            <div class="row">
+                <div class="video-container">
+                    <video src="imagens/WhatsApp Video 2024-10-22 at 09.07.03.mp4" controls>
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Porquê a Limpidex é Referência?</h3>
+                    <p>A Limpidex Refrigeração, fundada em 29 de setembro de 2010 e registrada sob o CNPJ 12.602.361/0001-97, oferece serviços especializados de instalação e manutenção de sistemas de ar condicionado, ventilação e refrigeração. Localizada em Cariacica, no Espírito Santo, a empresa atua com excelência no segmento de Refrigeração - Assistência Técnica.</p>
+
+                    <p><b>Missão:</b> Oferecer o melhor serviço de manutenção e instalação de ar condicionado, garantindo qualidade e satisfação aos clientes.</p>
+
+                    <p><b>Visão:</b> Expandir suas operações no Espírito Santo, criando filiais e aprimorando os serviços para atender ainda mais a demanda do mercado. </p>
+
+                    <p><b>Valores:</b> A empresa prioriza a qualidade e o atendimento personalizado, sempre buscando aprimorar seus serviços e fortalecer o relacionamento com os clientes.</p>
+
+                    <a href="servicos.html" class="btn">Seja Nosso Cliente</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service" id="service"></section>
+
+        <section class="contact" id="contact">
+            <h1 class="title">Contatos da Empresa</h1>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h2>Zeca do Ar</h2>
+                        <p>Email: <a href="mailto:eozecaamuleke@hotmail.com">eozecaamuleke@hotmail.com</a></p>
+                        <p>Telefone: (27) 99922-2841</p>
+                    </div>
+                    <div class="contact-card">
+                        <h2>Erica De Oliveira</h2>
+                        <p>Email: <a href="mailto:ericaalegre@hotmail.com">ericaalegre@hotmail.com</a></p>
+                        <p>Telefone: (27) 99275-0605</p>
+                    </div>
+                    <div class="contact-card">
+                        <h2>Contato Geral</h2>
+                        <p>Email: <a href="mailto:limpidexrefrigeracao@hotmail.com">limpidexrefrigeracao@hotmail.com</a></p>
+                        <p>Telefone: (27) 3226-6266</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Fale Conosco Pelo WhatsApp</h2>
+                    <form id="formulario-whatsapp">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+
+                        <button type="button" class="btn-whatsapp" onclick="enviarWhatsApp()">
+                            Enviar para WhatsApp
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Limpidex Refrigeração. Todos os direitos reservados. Produzido por Hérick.</p>
+    </footer>
+
+    <script>
+        function enviarWhatsApp() {
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = "+5527999222841";
+            const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+            const textoCodificado = encodeURIComponent(texto);
+            const url = `https://wa.me/${telefone}?text=${textoCodificado}`;
+            window.open(url, '_blank');
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    </body>
+
+</html>

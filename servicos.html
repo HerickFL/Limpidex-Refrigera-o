@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Limpidex Refrigeração</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/Logo da EMPRESA.png" alt="Logo da Limpidex Refrigeração">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#contact">Contate-Nós</a>
+                <a href="Faq.html">FAQs</a>
+                <a href="index.html#about">Quem Somos?</a>
+                <a href="servicos.html">Serviços</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="servicos-section">
+            <h1 class="title">Nossos <span>Serviços</span></h1>
+            <div class="servicos-grid">
+                <div class="servico-card animate__animated animate__fadeInUp">
+                    <ion-icon name="snow-outline"></ion-icon>
+                    <h3>Limpeza de Filtro</h3>
+                    <p>A limpeza regular do filtro é essencial para a qualidade do ar e o bom funcionamento do seu ar condicionado.</p>
+                </div>
+                <div class="servico-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <h3>Revisão Completa</h3>
+                    <p>Realizamos uma revisão completa do sistema para garantir que tudo esteja funcionando de forma segura e eficiente.</p>
+                </div>
+                <div class="servico-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <ion-icon name="build-outline"></ion-icon>
+                    <h3>Reparo de Equipamentos</h3>
+                    <p>Consertamos qualquer tipo de avaria nos aparelhos de ar condicionado de forma rápida e precisa.</p>
+                </div>
+                <div class="servico-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                    <ion-icon name="construct-outline"></ion-icon>
+                    <h3>Instalação Profissional</h3>
+                    <p>Trabalhamos com a instalação de diversos modelos de ar condicionado, garantindo qualidade e segurança.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="orcamento-section">
+            <div class="form-container animate__animated animate__fadeIn">
+                <h2 class="title">Solicite um <span>Orçamento</span></h2>
+                <form id="budget-form" class="form-orcamento">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="phone">Telefone (com DDD):</label>
+                    <input type="tel" id="phone" required placeholder="(27) 99999-9999">
+
+                    <label for="service">Serviço Requerido:</label>
+                    <select id="service" required>
+                        <option value="">Selecione o serviço...</option>
+                        <option value="instalacao">Instalação</option>
+                        <option value="manutencao">Limpeza e Manutenção</option>
+                        <option value="reparo">Reparo</option>
+                        <option value="revisao">Revisão Completa</option>
+                    </select>
+
+                    <label for="description">Descrição do Serviço:</label>
+                    <textarea id="description" rows="4" required placeholder="Descreva brevemente o que você precisa..."></textarea>
+
+                    <button type="submit" class="btn">Enviar Solicitação</button>
+                </form>
+                <div id="response-message" class="hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Limpidex Refrigeração. Todos os direitos reservados. Produzido por Hérick.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="servicos.js"></script> <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
